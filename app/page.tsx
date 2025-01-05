@@ -1,4 +1,6 @@
 import Image from "next/image";
+import React from "react";
+import ChartComponent from "@/components/ChartComponent";
 
 export default function Home() {
   return (
@@ -370,7 +372,7 @@ export default function Home() {
           {/* Grid */}
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-8">
-              <canvas id="myChart" className="w-full h-64" />
+              <ChartComponent />
             </div>
             <div className="col-span-4">
               <h3 className="font-bold text-center text-sm">
