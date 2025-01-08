@@ -302,9 +302,9 @@ export default function Home() {
       {/* /Overview & Today */}
       {/* Section Users Activity */}
       <section className="container mx-auto my-10 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Card 1 */}
-          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-indigo-50 shadow-md dark:bg-surface-dark dark:text-white">
+          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-blue-500 shadow-md dark:bg-surface-dark dark:text-white text-white">
             <div className="py-4 px-3">
               <h6 className="text-sm mb-1 font-medium leading-tight text-surface/75 dark:text-neutral-300">
                 Views
@@ -313,13 +313,15 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold">7,265</h2>
                 <h5 className="text-xs">
                   +11.01%&nbsp;&nbsp;
-                  <i className="fa-solid fa-arrow-up" />
                 </h5>
+                <svg width={15} height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor">
+  <path d="M182.6 48.6c-9.4-9.4-24.6-9.4-33.9 0l-144 144c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L144 121.9V456c0 13.3 10.7 24 24 24s24-10.7 24-24V121.9l105.4 105.4c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-144-144z"/>
+                   </svg>
               </div>
             </div>
           </div>
           {/* Card 2 */}
-          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-blue-50 text-left shadow-md dark:bg-surface-dark dark:text-white">
+          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-green-500 text-left shadow-md dark:bg-surface-dark dark:text-white text-white">
             <div className="py-4 px-3">
               <h6 className="text-sm mb-1 font-medium leading-tight text-surface/75 dark:text-neutral-300">
                 Visits
@@ -328,13 +330,15 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold">3,671</h2>
                 <h5 className="text-xs">
                   -0.03%&nbsp;&nbsp;
-                  <i className="fa-solid fa-arrow-down" />
                 </h5>
+                <svg width={15} height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor">
+  <path d="M143 24c-13.3 0-24 10.7-24 24v334.1L13.7 276.7c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l144 144c9.4 9.4 24.6 9.4 33.9 0l144-144c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L168 382.1V48c0-13.3-10.7-24-24-24z"/>
+</svg>
               </div>
             </div>
           </div>
           {/* Card 3 */}
-          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-indigo-50 text-left shadow-md dark:bg-surface-dark dark:text-white">
+          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-red-500 text-left shadow-md dark:bg-surface-dark text-white">
             <div className="py-4 px-3">
               <h6 className="text-sm mb-1 font-medium leading-tight text-surface/75 dark:text-neutral-300">
                 New Users
@@ -343,13 +347,15 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold">156</h2>
                 <h5 className="text-xs">
                   +15.03%&nbsp;&nbsp;
-                  <i className="fa-solid fa-arrow-up" />
                 </h5>
+                <svg width={15} height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor">
+            <path d="M182.6 48.6c-9.4-9.4-24.6-9.4-33.9 0l-144 144c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L144 121.9V456c0 13.3 10.7 24 24 24s24-10.7 24-24V121.9l105.4 105.4c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-144-144z"/>
+                   </svg>
               </div>
             </div>
           </div>
           {/* Card 4 */}
-          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-blue-50 text-left shadow-md dark:bg-surface-dark dark:text-white">
+          <div className="block max-w-[14rem] h-[6rem] rounded-lg bg-black text-left shadow-md dark:bg-surface-dark text-white">
             <div className="py-4 px-3">
               <h6 className="text-sm mb-1 font-medium leading-tight text-surface/75 dark:text-neutral-300">
                 Active Users
@@ -358,8 +364,10 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold">2,318</h2>
                 <h5 className="text-xs">
                   +6.08%&nbsp;&nbsp;
-                  <i className="fa-solid fa-arrow-up" />
                 </h5>
+                <svg width={15} height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor">
+  <path d="M182.6 48.6c-9.4-9.4-24.6-9.4-33.9 0l-144 144c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L144 121.9V456c0 13.3 10.7 24 24 24s24-10.7 24-24V121.9l105.4 105.4c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-144-144z"/>
+                   </svg>
               </div>
             </div>
           </div>
