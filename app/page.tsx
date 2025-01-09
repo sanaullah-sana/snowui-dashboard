@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import ChartComponent from "@/components/ChartComponent";
+import BarChart from "@/components/BarChart";
+import DonutChart from "@/components/DonutChart"; // Imported the Donut Chart
 
 export default function Home() {
   return (
@@ -193,7 +195,7 @@ export default function Home() {
             aria-label="Toggle navigation"
           >
             {/* Hamburger icon */}
-            <span className="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+            <span className="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200 lg:hidden block lg:relative absolute right-4 top-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -250,7 +252,7 @@ export default function Home() {
               <i className="fa-solid fa-magnifying-glass pr-2" />
               <input
                 type="search"
-                className="relative m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary"
+                className="lg:relative absolute top-3 right-40 m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary"
                 placeholder="Search"
                 aria-label="Search input"
                 id="exampleFormControlInput2"
@@ -261,6 +263,7 @@ export default function Home() {
                 aria-label="Submit search"
               ></button>
             </form>
+            <div className="flex items-center gap-1 lg:relative fixed bottom-0">
             {/* Light Icon */}
             <a href="#" id="toggleButton">
             <svg className="svg-inline--fa fa-sun pr-2" width={24} height={24} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"></path></svg>
@@ -277,6 +280,7 @@ export default function Home() {
             <a href="#">
             <svg className="svg-inline--fa fa-bell" width={20} height={20} aria-hidden="true" focusable="false" data-prefix="far" data-icon="bell" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416l400 0c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4l0-25.4c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112l0 25.4c0 47.9 13.9 94.6 39.7 134.6L72.3 368C98.1 328 112 281.3 112 233.4l0-25.4c0-61.9 50.1-112 112-112zm64 352l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
             </a>
+            </div>
             {/* Container with two dropdown menus */}
             <div
               className="relative"
@@ -317,7 +321,7 @@ export default function Home() {
                 Views
               </h6>
               <div className="flex items-center gap-2">
-                <h2 className="text-2xl font-semibold">7,265</h2>
+                <h2 className="lg:text-2xl md:text-xl text-lg font-semibold">7,265</h2>
                 <h5 className="text-xs">
                   +11.01%&nbsp;&nbsp;
                 </h5>
@@ -334,7 +338,7 @@ export default function Home() {
                 Visits
               </h6>
               <div className="flex items-center gap-2">
-                <h2 className="text-2xl font-semibold">3,671</h2>
+                <h2 className="lg:text-2xl md:text-xl text-lg font-semibold">3,671</h2>
                 <h5 className="text-xs">
                   -0.03%&nbsp;&nbsp;
                 </h5>
@@ -351,7 +355,7 @@ export default function Home() {
                 New Users
               </h6>
               <div className="flex items-center gap-2">
-                <h2 className="text-2xl font-semibold">156</h2>
+                <h2 className="lg:text-2xl md:text-xl text-lg font-semibold">156</h2>
                 <h5 className="text-xs">
                   +15.03%&nbsp;&nbsp;
                 </h5>
@@ -368,7 +372,7 @@ export default function Home() {
                 Active Users
               </h6>
               <div className="flex items-center gap-2">
-                <h2 className="text-2xl font-semibold">2,318</h2>
+                <h2 className="lg:text-2xl md:text-xl text-lg font-semibold">2,318</h2>
                 <h5 className="text-xs">
                   +6.08%&nbsp;&nbsp;
                 </h5>
@@ -390,7 +394,7 @@ export default function Home() {
               <ChartComponent />
             </div>
             <div className="col-span-4">
-              <h3 className="font-bold text-center text-sm">
+              <h3 className="font-bold text-center lg:text-sm text-xs">
                 Traffic by Website
               </h3>
               <div className="flex gap-2 my-4">
@@ -495,10 +499,10 @@ export default function Home() {
           {/* Grid */}
           <div className="grid grid-cols-12 gap-4 items-center">
             <div className="col-span-6">
-              <canvas id="stylishBarChart" />
+            <BarChart />
             </div>
             <div className="col-span-6">
-              <canvas id="stylishPieChart" />
+            <DonutChart />
             </div>
           </div>
           {/* /Grid */}
