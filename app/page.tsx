@@ -13,8 +13,15 @@ export default function Home() {
       className="left-side-panel fixed top-0 bottom-0 left-0 border-r border-slate-500 w-52 transform transition-transform -translate-x-full lg:translate-x-0 ease-in duration-150 bg-white z-40"
     >
       {/* Profile */}
-      <div className="flex py-5 pl-5">
-        
+      <div className="flex items-center py-5 pl-5">
+      <Image
+          className="dark:invert"
+          src="/img-profile-ByeWind.jpg"
+          alt="Bye wind Profile"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Bye Wind
         </a>
@@ -208,10 +215,10 @@ export default function Home() {
           >
             {/* Dashboard Icons */}
             <a href="#">
-              <i className="fa-solid fa-book" />
+            <svg className="svg-inline--fa fa-book" width={20} height={20} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
             </a>
             <a href="#" className="pl-3">
-              <i className="fa-regular fa-star" />
+            <svg className="svg-inline--fa fa-star" width={20} height={20} aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"></path></svg>
             </a>
             {/* Left navigation links */}
             <ul
@@ -503,41 +510,49 @@ export default function Home() {
     {/* Right Side Bar */}
     <div className="right-side-panel fixed top-0 bottom-0 right-0 border-l border-slate-500 w-72 lg:block hidden overflow-y-auto">
       {/* Notifications */}
-      <h3 className="text-sm pt-3 pl-5">Notifications</h3>
+      <h3 className="text-sm py-3 pl-5">Notifications</h3>
       <div className="flex flex-col justify-center py-1 pl-5">
-        <div>
+        <div className="flex items-start gap-2">
           <a className="text-sm" href="#">
-            <i className="fa-solid fa-bug" />
-            &nbsp;&nbsp;You fixed a bug.
-          </a>
-          <h6 className="text-slate-400 pl-6">Just now</h6>
+          <svg className="svg-inline--fa fa-bug" width={15} height={15} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bug" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c53 0 96 43 96 96l0 3.6c0 15.7-12.7 28.4-28.4 28.4l-135.1 0c-15.7 0-28.4-12.7-28.4-28.4l0-3.6c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7 .7 1.3 1.4 1.9 2.1c14.2-7.3 30.4-11.4 47.5-11.4l112 0c17.1 0 33.2 4.1 47.5 11.4c.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7 .7-1.4 1.3-2.1 1.9c6.2 12 10.1 25.3 11.1 39.5l64.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c0 24.6-5.5 47.8-15.4 68.6c2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6L272 240c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 239.2c-34.5-3.4-65.8-17.8-90.3-39.6L86.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64.3 0c1.1-14.1 5-27.5 11.1-39.5c-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"></path></svg>
+            </a>
+          <div>
+          <h5 className="text-sm">You fixed a bug.</h5>
+          <h6 className="text-slate-400 text-sm">Just now</h6>
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center py-1 pl-5">
-        <div>
+        <div className="flex items-start gap-2">
           <a className="text-sm" href="#">
-            <i className="fa-regular fa-user" />
-            &nbsp;&nbsp;New user registered.
-          </a>
-          <h6 className="text-slate-400 pl-6">59 minutes ago</h6>
+          <svg className="svg-inline--fa fa-user" width={15} height={15} aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"></path></svg>
+            </a>
+          <div>
+          <h5 className="text-sm">New user registered.</h5>
+          <h6 className="text-slate-400 text-sm">59 minutes ago</h6>
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center py-1 pl-5">
-        <div>
+        <div className="flex items-start gap-2">
           <a className="text-sm" href="#">
-            <i className="fa-solid fa-bug" />
-            &nbsp;&nbsp;You fixed a bug.
-          </a>
-          <h6 className="text-slate-400 pl-6">12 hours ago</h6>
+          <svg className="svg-inline--fa fa-bug" width={15} height={15} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bug" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c53 0 96 43 96 96l0 3.6c0 15.7-12.7 28.4-28.4 28.4l-135.1 0c-15.7 0-28.4-12.7-28.4-28.4l0-3.6c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7 .7 1.3 1.4 1.9 2.1c14.2-7.3 30.4-11.4 47.5-11.4l112 0c17.1 0 33.2 4.1 47.5 11.4c.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7 .7-1.4 1.3-2.1 1.9c6.2 12 10.1 25.3 11.1 39.5l64.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c0 24.6-5.5 47.8-15.4 68.6c2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6L272 240c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 239.2c-34.5-3.4-65.8-17.8-90.3-39.6L86.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64.3 0c1.1-14.1 5-27.5 11.1-39.5c-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"></path></svg>
+            </a>
+          <div>
+          <h5 className="text-sm">You fixed a bug.</h5>
+          <h6 className="text-slate-400 text-sm">12 hours ago</h6>
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center py-1 pl-5">
-        <div>
+        <div className="flex items-start gap-2">
           <a className="text-sm" href="#">
-            <i className="fa-solid fa-bug" />
-            &nbsp;&nbsp;Andi Lane subscribed to you.
-          </a>
-          <h6 className="text-slate-400 pl-6">Today, 11:59 AM</h6>
+          <svg className="svg-inline--fa fa-bug" width={15} height={15} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bug" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c53 0 96 43 96 96l0 3.6c0 15.7-12.7 28.4-28.4 28.4l-135.1 0c-15.7 0-28.4-12.7-28.4-28.4l0-3.6c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7 .7 1.3 1.4 1.9 2.1c14.2-7.3 30.4-11.4 47.5-11.4l112 0c17.1 0 33.2 4.1 47.5 11.4c.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7 .7-1.4 1.3-2.1 1.9c6.2 12 10.1 25.3 11.1 39.5l64.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c0 24.6-5.5 47.8-15.4 68.6c2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6L272 240c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 239.2c-34.5-3.4-65.8-17.8-90.3-39.6L86.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64.3 0c1.1-14.1 5-27.5 11.1-39.5c-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"></path></svg>
+            </a>
+          <div>
+          <h5 className="text-sm pb-1"> Andi Lane subscribed to you.</h5>
+          <h6 className="text-slate-400 text-sm">Today, 11:59 AM</h6>
+          </div>
         </div>
       </div>
       {/* Notifications */}
@@ -545,7 +560,14 @@ export default function Home() {
       <h3 className="text-sm py-3 pl-5">Activities</h3>
       <div className="flex py-1 pl-5">
         <div className="pt-1">
-          
+        <Image
+          className="dark:invert"
+          src="/activity-1.jpg"
+          alt="Activity 1"
+          width={25}
+          height={25}
+          priority
+        />
         </div>
         <div>
           <a className="text-sm" href="#">
@@ -556,7 +578,14 @@ export default function Home() {
       </div>
       <div className="flex py-1 pl-5">
         <div className="pt-1">
-          
+        <Image
+          className="dark:invert"
+          src="/activity-2.jpg"
+          alt="Activity 2"
+          width={25}
+          height={25}
+          priority
+        />
         </div>
         <div>
           <a className="text-sm" href="#">
@@ -567,7 +596,14 @@ export default function Home() {
       </div>
       <div className="flex py-1 pl-5">
         <div className="pt-1">
-          
+        <Image
+          className="dark:invert"
+          src="/activity-3.jpg"
+          alt="Activity 3"
+          width={25}
+          height={25}
+          priority
+        />
         </div>
         <div>
           <a className="text-sm" href="#">
@@ -578,7 +614,14 @@ export default function Home() {
       </div>
       <div className="flex py-1 pl-5">
         <div className="pt-1">
-          
+        <Image
+          className="dark:invert"
+          src="/activity-4.jpg"
+          alt="Activity 4"
+          width={25}
+          height={25}
+          priority
+        />
         </div>
         <div>
           <a className="text-sm" href="#">
@@ -589,7 +632,14 @@ export default function Home() {
       </div>
       <div className="flex py-1 pl-5">
         <div className="pt-1">
-          
+        <Image
+          className="dark:invert"
+          src="/activity-5.jpg"
+          alt="Activity 5"
+          width={25}
+          height={25}
+          priority
+        />
         </div>
         <div>
           <a className="text-sm" href="#">
@@ -602,37 +652,79 @@ export default function Home() {
       {/* Contacts */}
       <h3 className="text-sm py-3 pl-5">Contacts</h3>
       <div className="flex py-2 pl-5">
-        
+      <Image
+          className="dark:invert"
+          src="/img-contact-1.jpg"
+          alt="Contact 1"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Natali Craig
         </a>
       </div>
       <div className="flex py-2 pl-5">
-        
+      <Image
+          className="dark:invert"
+          src="/img-contact-2.jpg"
+          alt="Contact 2"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Drew Cano
         </a>
       </div>
       <div className="flex py-2 pl-5">
-        
+      <Image
+          className="dark:invert"
+          src="/img-contact-3.jpg"
+          alt="Contact 3"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Andi Lane
         </a>
       </div>
       <div className="flex py-2 pl-5">
-        
+      <Image
+          className="dark:invert"
+          src="/img-contact-4.jpg"
+          alt="Contact 4"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Koray Okumus
         </a>
       </div>
       <div className="flex py-2 pl-5">
-        
+      <Image
+          className="dark:invert"
+          src="/img-contact-5.jpg"
+          alt="Contact 5"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Kate Morrison
         </a>
       </div>
       <div className="flex py-2 pl-5">
-        
+      <Image
+          className="dark:invert"
+          src="/img-contact-6.jpg"
+          alt="Contact 6"
+          width={25}
+          height={25}
+          priority
+        />
         <a href="#" className="text-sm pl-2">
           Melody Macy
         </a>
