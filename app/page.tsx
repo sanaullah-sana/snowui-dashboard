@@ -3,6 +3,7 @@ import React from "react";
 import ChartComponent from "@/components/ChartComponent";
 import BarChart from "@/components/BarChart";
 import DonutChart from "@/components/DonutChart"; // Imported the Donut Chart
+import SlidingPanel from '@/components/SlidePanel';
 
 export default function Home() {
   return (
@@ -166,7 +167,7 @@ export default function Home() {
         </li>
       </ul>
       {/* /Pages */}
-      <div className="fixed-bottom flex justify-center">
+      <div className="fixed bottom-0 flex justify-center">
         
         <Image
           className="dark:invert"
@@ -182,33 +183,10 @@ export default function Home() {
     {/* Center Contents */}
     <div className="md:ml-64 centered-content lg:ml-52 lg:mr-72 overflow-y-auto h-screen">
       {/* Main navigation container */}
+      <SlidingPanel />
       <nav className="flex flex-wrap items-center justify-between w-full bg-zinc-50 pb-2 shadow dark:bg-surface-dark lg:py-4">
         <div className="flex w-full flex-wrap items-center justify-between px-3">
-          {/* Hamburger button for mobile view */}
-          <button
-            className="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 md:hidden"
-            type="button"
-            data-twe-collapse-init=""
-            data-twe-target="#navbarSupportedContent12"
-            aria-controls="navbarSupportedContent12"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            {/* Hamburger icon */}
-            <span className="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200 lg:hidden block lg:relative absolute right-4 top-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </button>
+
           {/* Collapsible navigation container */}
           <div
             className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
@@ -252,7 +230,7 @@ export default function Home() {
               <i className="fa-solid fa-magnifying-glass pr-2" />
               <input
                 type="search"
-                className="lg:relative fixed left-3 top-3 m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary"
+                className="lg:relative lg:top-0 fixed left-3 top-3 m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary"
                 placeholder="Search"
                 aria-label="Search input"
                 id="exampleFormControlInput2"
@@ -263,7 +241,7 @@ export default function Home() {
                 aria-label="Submit search"
               ></button>
             </form>
-            <div className="flex items-center gap-1 lg:relative lg:bottom-auto lg:right-auto fixed bottom-0 right-20">
+            <div className="flex items-center gap-1 lg:relative lg:bottom-auto lg:right-auto lg:left-auto fixed bottom-0 right-0 left-0 justify-evenly lg:bg-transparent bg-white">
             {/* Light Icon */}
             <a href="#" id="toggleButton">
             <svg className="svg-inline--fa fa-sun pr-2" width={24} height={24} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"></path></svg>
@@ -307,8 +285,8 @@ export default function Home() {
       </nav>
       {/* Overview & Today */}
       <div className="container py-5">
-        <h3 className="text-sm font-bold float-start py-3 pl-4">Overview</h3>
-        <h3 className="text-sm text-slate-500 float-end py-3 pr-4">Today</h3>
+        <h3 className="text-sm font-bold float-start lg:py-3 lg:pl-4 pt-6 pl-6">Overview</h3>
+        <h3 className="text-sm text-slate-500 float-end lg:py-3 lg:pr-4 pt-6 pr-6">Today</h3>
       </div>
       {/* /Overview & Today */}
       {/* Section Users Activity */}
@@ -390,10 +368,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           {/* Grid */}
           <div className="grid grid-cols-12 gap-4">
-            <div className="col-span-8">
+            <div className="lg:col-span-8 col-span-12">
               <ChartComponent />
             </div>
-            <div className="col-span-4">
+            <div className="lg:col-span-4 col-span-12">
               <h3 className="font-bold text-center lg:text-sm text-xs">
                 Traffic by Website
               </h3>
@@ -498,10 +476,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           {/* Grid */}
           <div className="grid grid-cols-12 gap-4 items-center">
-            <div className="col-span-6">
+            <div className="lg:col-span-6 col-span-12">
             <BarChart />
             </div>
-            <div className="col-span-6">
+            <div className="lg:col-span-6 col-span-12">
             <DonutChart />
             </div>
           </div>
